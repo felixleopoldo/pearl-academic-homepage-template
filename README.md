@@ -7,6 +7,10 @@ bibliography-style publication list, numbered-icon lecture markers — rebuilt a
 a modern, frame-free Jekyll site (no actual `<frameset>`) so it's responsive,
 accessible, and easy to fork, theme, and deploy on GitHub Pages.
 
+**[Live demo →](https://felixleopoldo.github.io/pearl-academic-homepage-template/)**
+
+![Preview](docs/preview.png)
+
 ## Use this template
 
 1. Click **"Use this template"** on GitHub (or fork the repo).
@@ -15,7 +19,9 @@ accessible, and easy to fork, theme, and deploy on GitHub Pages.
    `https://<username>.github.io/<repo-name>/`).
 3. Edit `_config.yml`:
    - `title`, `author.*` (name, position, affiliation, email)
-   - `url` / `baseurl`
+   - `url` (leave `baseurl` blank — the workflow sets it automatically based
+     on whether your repo is a `username.github.io` root site or served
+     under a subpath, so it works either way without editing)
    - `nav`, `social`, `news`, `reviewer_for`
 4. Edit `index.md`, `bio.md`, `publications.md`, `talks.md`, `software.md` with
    your own content.
@@ -41,12 +47,13 @@ Then open http://localhost:4000.
 ```
 _config.yml       site settings, nav, social links, news items
 _layouts/         default.html — sidebar + content wrapper
-_includes/        sidebar.html, icon.html (inline SVG icon set, no CDN)
-assets/css/       style.css — single stylesheet, light/dark via prefers-color-scheme
+_includes/        sidebar.html
+assets/css/       style.css — single stylesheet, the retro Pearl-homepage palette
+assets/images/    01-g.gif..04-g.gif — numbered lecture-marker icons
 index.md          home page (intro, current position, research interests, news, reviewer-for)
 bio.md            positions & education
-publications.md   publication list
-talks.md          talks list
+publications.md   "(R-N): [pdf]"-style reference list
+talks.md          talks list, incl. numbered-icon "Selected Lectures"
 software.md       software/projects list
 ```
 
