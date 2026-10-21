@@ -8,12 +8,14 @@
     <div class="photo photo-placeholder" aria-hidden="true">photo</div>
   {% endif %}
 
+  {% assign sidebar_org = site.author.university | default: site.author.affiliation %}
+  {% assign sidebar_org_url = site.author.university_url | default: site.author.affiliation_url %}
   <div class="contact">
-    {% if site.author.affiliation %}
-      {% if site.author.affiliation_url %}
-        <a href="{{ site.author.affiliation_url }}" target="_blank" rel="noopener">{{ site.author.affiliation }}</a><br>
+    {% if sidebar_org %}
+      {% if sidebar_org_url %}
+        <a href="{{ sidebar_org_url }}" target="_blank" rel="noopener">{{ sidebar_org }}</a><br>
       {% else %}
-        {{ site.author.affiliation }}<br>
+        {{ sidebar_org }}<br>
       {% endif %}
     {% endif %}
     {% if site.author.phone and site.author.phone != "" %}tel: {{ site.author.phone }}<br>{% endif %}

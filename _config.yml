@@ -8,8 +8,10 @@ description: >-
 author:
   name: "Your Name"
   position: "PhD Student / Postdoc / Research Fellow / Professor"
-  affiliation: "Your Department, Your University"
+  affiliation: "Your Department, Your University" # full detail, used in the "Current Position" line on the home page
   affiliation_url: "https://example.edu"
+  university: "Your University" # short form, used in the sidebar — falls back to affiliation if left empty
+  university_url: "https://example.edu"
   phone: "" # e.g. "(+1) 555-0100" — leave empty to omit
   email: "you@example.edu"
   photo: "" # path under /assets/images/, e.g. "/assets/images/profile.jpg" — leave empty to show a plain placeholder box
