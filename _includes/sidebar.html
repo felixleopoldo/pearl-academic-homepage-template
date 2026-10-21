@@ -1,0 +1,35 @@
+<aside class="sidebar">
+  <h1 class="name">{{ site.author.name | upcase }}</h1>
+  <hr class="divider">
+
+  {% if site.author.photo and site.author.photo != "" %}
+    <img class="photo" src="{{ site.author.photo | relative_url }}" alt="{{ site.author.name }}">
+  {% else %}
+    <div class="photo photo-placeholder" aria-hidden="true">photo</div>
+  {% endif %}
+
+  <div class="contact">
+    {% if site.author.affiliation %}
+      {% if site.author.affiliation_url %}
+        <a href="{{ site.author.affiliation_url }}" target="_blank" rel="noopener">{{ site.author.affiliation }}</a><br>
+      {% else %}
+        {{ site.author.affiliation }}<br>
+      {% endif %}
+    {% endif %}
+    {% if site.author.phone and site.author.phone != "" %}tel: {{ site.author.phone }}<br>{% endif %}
+    email: <em>{{ site.author.email }}</em><br>
+    {% for link in site.social %}
+      {{ link.name }}: <a href="{{ link.url }}" target="_blank" rel="noopener">{{ link.label }}</a><br>
+    {% endfor %}
+  </div>
+
+  <nav class="nav">
+    {% for item in site.nav %}
+      {% unless item.url == "/" %}
+        <a href="{{ item.url | relative_url }}">{{ item.title | upcase }}</a>&#8195; &#8195;<br>
+      {% endunless %}
+    {% endfor %}
+  </nav>
+
+  <hr class="divider">
+</aside>

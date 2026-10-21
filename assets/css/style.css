@@ -1,0 +1,188 @@
+:root {
+  --menu-bg: #a9aa97;
+  --content-bg: #fffff0;
+  --accent: #003366;
+  --text: #000000;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--content-bg);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* The original site never sets <body link="..."> so links render as the
+   browser default blue, not the navy (--accent) used for surrounding text. */
+a { color: #0000ee; text-decoration: underline; }
+a:visited { color: #551a8b; }
+a:hover { text-decoration: none; }
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+  align-items: flex-start;
+}
+
+/* Sidebar — mirrors the original menuFrame.htm: #a9aa97 background,
+   large name header, photo, contact block, nav links, white dividers. */
+.sidebar {
+  flex: 0 0 260px;
+  background: var(--menu-bg);
+  padding: 1.5rem 1.25rem;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  align-self: flex-start;
+  min-height: 100vh;
+  border-right: 5px solid #d0d0d0;
+}
+
+/* Thin dark line at the inner edge of the grey gutter, matching the native
+   frame-border rendering browsers used to draw between <frame> panes. */
+.sidebar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -5px; /* push past the grey border, to its outer edge (next to content) */
+  width: 1px;
+  background: #4d4d4d;
+}
+
+.sidebar .name {
+  /* "Andy" isn't a web-safe font — on the original site it's unavailable on
+     most systems, so the browser falls back to its own default font (serif),
+     which reads visibly different from the Arial body text. Reproduced here
+     rather than substituting a lookalike script font. */
+  font-family: Andy, "Times New Roman", Times, serif;
+  font-size: 3rem; /* legacy <font size="7"> renders ~48px in most browsers */
+  font-weight: normal;
+  color: var(--accent);
+  margin: 0 0 0.5rem;
+  line-height: 1.1;
+}
+
+.divider {
+  border: none;
+  border-top: 2px solid #ffffff;
+  margin: 0.75rem 0;
+}
+
+.photo {
+  display: block;
+  width: 100%;
+  max-width: 200px;
+  height: 200px;
+  margin: 0.75rem auto;
+  object-fit: cover;
+  border: 0;
+}
+
+.photo-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #c6c7b6;
+  color: var(--accent);
+  font-style: italic;
+}
+
+.contact {
+  text-align: left;
+  font-weight: bold;
+  color: var(--accent);
+  font-size: 0.95rem;
+  margin: 1rem 0;
+}
+
+.contact em { font-style: italic; font-weight: normal; }
+
+.sidebar .nav {
+  text-align: center;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+.sidebar .nav a {
+  font-size: 0.95rem;
+}
+
+/* Content pane — mirrors home.htm: ivory background, centered title bar,
+   horizontal nav row, small Arial body text. */
+.content {
+  flex: 1;
+  min-width: 0;
+  padding: 1.25rem 2rem 4rem;
+}
+
+.content-title {
+  text-align: center;
+  font-weight: bold;
+  color: var(--accent);
+  font-size: 0.8125rem; /* legacy <font size="2"> renders ~13px, same as body text */
+  margin: 0 0 0.5rem;
+}
+
+.content-nav {
+  display: block;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.content-nav a {
+  font-weight: normal;
+}
+
+.content h2 {
+  font-size: 1rem;
+  margin: 1.75rem 0 0.75rem;
+}
+
+.content h2:first-child { margin-top: 0; }
+
+section + section { margin-top: 1.25rem; }
+
+.news ul, .reviewer-for ul, .content ul { padding-left: 1.2rem; }
+.news li, .reviewer-for li { margin-bottom: 0.4rem; }
+
+.news-date {
+  color: var(--accent);
+  font-size: 0.85rem;
+  margin-right: 0.4rem;
+}
+
+.entry { margin-bottom: 1rem; }
+.entry .meta { font-size: 0.9rem; }
+
+/* Reference-numbered bibliography list, "(R-N): [pdf] [code]" style. */
+.ref-list { margin: 0; }
+.ref-list dt { margin-top: 1rem; font-weight: bold; }
+.ref-list dt:first-child { margin-top: 0; }
+.ref-list dd { margin: 0.25rem 0 0; }
+.ref-id { color: #000099; }
+
+/* Numbered-icon entries (01-g.gif, 02-g.gif, ...), same markers used as list
+   bullets for selected talks/lectures on the original site. */
+.numbered-entry {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0 0 0.6rem;
+}
+
+.numbered-entry img { flex: 0 0 20px; }
+
+@media (max-width: 760px) {
+  .layout { flex-direction: column; }
+  .sidebar {
+    flex: none;
+    width: 100%;
+    position: static;
+  }
+  .content { padding: 1.5rem 1.25rem 3rem; }
+}

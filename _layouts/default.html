@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+{% feed_meta %}
+{% seo %}
+</head>
+<body>
+<div class="layout">
+  {% include sidebar.html %}
+  <main class="content">
+    <p class="content-title">{{ site.author.name | upcase }} - {{ page.title | default: "HOME" | upcase }}</p>
+    <nav class="content-nav">
+      {% for item in site.nav %}
+        <a href="{{ item.url | relative_url }}">{{ item.title | upcase }}</a>{% unless forloop.last %}&#8195; &#8195;{% endunless %}
+      {% endfor %}
+    </nav>
+    <article>
+      {{ content }}
+    </article>
+  </main>
+</div>
+</body>
+</html>

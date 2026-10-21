@@ -1,0 +1,71 @@
+# Site-wide settings. Everything here is a placeholder — replace with your own details.
+title: "Your Name"
+tagline: "Academic Homepage"
+description: >-
+  A clean, minimal Jekyll template for an academic personal website —
+  structurally inspired by Judea Pearl's homepage (http://bayes.cs.ucla.edu/jp_home.html).
+
+author:
+  name: "Your Name"
+  position: "PhD Student / Postdoc / Research Fellow / Professor"
+  affiliation: "Your Department, Your University"
+  affiliation_url: "https://example.edu"
+  phone: "" # e.g. "(+1) 555-0100" — leave empty to omit
+  email: "you@example.edu"
+  photo: "" # path under /assets/images/, e.g. "/assets/images/profile.jpg" — leave empty to show a plain placeholder box
+
+url: "https://yourusername.github.io"
+baseurl: ""
+
+markdown: kramdown
+permalink: pretty
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+nav:
+  - title: Home
+    url: /
+  - title: Publications
+    url: /publications/
+  - title: Talks
+    url: /talks/
+  - title: Software
+    url: /software/
+  - title: Bio
+    url: /bio/
+
+# Shown as plain text lines under the contact block in the sidebar,
+# e.g. "LinkedIn: in/yourname" the way the original site lists them.
+social:
+  - name: LinkedIn
+    label: "in/yourname"
+    url: "https://www.linkedin.com/in/yourname/"
+  - name: GitHub
+    label: "github.com/yourname"
+    url: "https://github.com/yourname/"
+  - name: Google Scholar
+    label: "scholar.google.com/yourname"
+    url: "https://scholar.google.com/"
+
+# Short news/updates feed shown on the home page, most recent first.
+news:
+  - date: 2026-01-01
+    text: >-
+      Welcome to your new academic homepage! Edit <code>_config.yml</code>
+      and the pages in this repo to make it yours.
+
+# Shown on the home page as a simple "Reviewer for" list.
+reviewer_for:
+  - name: "Example Conference 2026"
+    url: "https://example.com"
+  - name: "Example Journal"
+    url: "https://example.com"
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
