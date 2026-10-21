@@ -112,6 +112,15 @@ a:hover { text-decoration: none; }
   font-size: 0.95rem;
 }
 
+.credit {
+  font-size: 0.7rem;
+  font-style: italic;
+  color: #5c5d50;
+  margin: 1.5rem 0 0;
+}
+
+.credit a { color: inherit; }
+
 /* Content pane — mirrors home.htm: ivory background, centered title bar,
    horizontal nav row, small Arial body text. */
 .content {
