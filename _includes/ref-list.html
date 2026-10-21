@@ -6,7 +6,9 @@
 
   Each item needs `id` and optionally `links` (list of {label, url}).
   Then either:
-    - authors + title + venue   → renders as a publication/talk citation, or
+    - authors + title + venue   → renders as a publication/talk citation
+      (`venue` should include its own leading preposition, e.g.
+      "In Journal of Statistical Software, ..." or "at CMStatistics, ..."), or
     - title + description       → renders as a software/project entry
   Add `repo` (e.g. "yourname/yourrepo") to show a live GitHub star badge.
 {% endcomment %}
@@ -20,7 +22,7 @@
     <dd>
       {% if item.authors %}
         <strong>{{ item.authors }}</strong>, &ldquo;{{ item.title }},&rdquo;<br>
-        In <em>{{ item.venue }}</em>.
+        {{ item.venue }}.
       {% else %}
         <strong>{{ item.title }}</strong> &mdash; {{ item.description }}
       {% endif %}

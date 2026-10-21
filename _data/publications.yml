@@ -1,9 +1,10 @@
 # Most recent first. Each entry renders as "(id): [link labels]" followed by
-# authors, title, and venue. Delete `links` entries you don't have.
+# authors, title, and venue. `venue` needs its own leading preposition (e.g.
+# "In Journal Name, ..."). Delete `links` entries you don't have.
 - id: R-3
   authors: "Author One, Author Two"
   title: "Paper title goes here"
-  venue: "Journal or Conference Name, vol:pages, 2026"
+  venue: "In Journal or Conference Name, vol:pages, 2026"
   links:
     - { label: pdf, url: "#" }
     - { label: code, url: "#" }
@@ -11,14 +12,14 @@
 - id: R-2
   authors: "Author One"
   title: "Another paper title"
-  venue: "Proceedings of Some Conference, pp. 1–10, 2025"
+  venue: "In Proceedings of Some Conference, pp. 1–10, 2025"
   links:
     - { label: pdf, url: "#" }
 
 - id: R-1
   authors: "Author One, Author Two, Author Three"
   title: "Earlier paper title"
-  venue: "Journal Name, 1(1):1–20, 2024"
+  venue: "In Journal Name, 1(1):1–20, 2024"
   links:
     - { label: pdf, url: "#" }
     - { label: arXiv, url: "#" }

@@ -1,12 +1,13 @@
 # Most recent first. `links` is optional (e.g. a recording or slides).
+# `venue` needs its own leading preposition (e.g. "at Conference Name, ...").
 - id: T-2
   authors: "Your Name"
   title: "Another talk title"
-  venue: "Invited talk, Department of Example, University Name — Month Year"
+  venue: "Invited talk at the Department of Example, University Name — Month Year"
 
 - id: T-1
   authors: "Your Name"
   title: "Talk title goes here"
-  venue: "Conference / Seminar Name, City, Country — Month Year"
+  venue: "at Conference / Seminar Name, City, Country — Month Year"
   links:
     - { label: video, url: "#" }
