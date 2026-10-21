@@ -6,10 +6,8 @@
 
 A Jekyll template that faithfully recreates the retro academic-homepage look of
 [Judea Pearl's homepage](https://bayes.cs.ucla.edu/jp_home.html) — olive sidebar,
-ivory content pane, navy headings, standard blue links, "(R-N): [pdf]"
-bibliography-style publication list, numbered-icon lecture markers — rebuilt as
-a modern, frame-free Jekyll site (no actual `<frameset>`) so it's responsive,
-accessible, and easy to fork, theme, and deploy on GitHub Pages.
+ivory content pane, navy headings, standard blue links — easy to fork, theme,
+and deploy on GitHub Pages.
 
 **[Live demo →](https://felixleopoldo.github.io/pearl-academic-homepage-template/)**
 
