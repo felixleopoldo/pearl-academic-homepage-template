@@ -1,0 +1,15 @@
+# Each entry needs `title` + `description`. Add `repo: yourname/yourrepo` to
+# show a live GitHub star-count badge.
+- id: S-2
+  title: "Project Name"
+  description: "A one-line description of what this tool/library does and who it's for."
+  repo: yourname/yourrepo
+  links:
+    - { label: github, url: "#" }
+    - { label: documentation, url: "#" }
+
+- id: S-1
+  title: "Another Project"
+  description: "A one-line description."
+  links:
+    - { label: github, url: "#" }

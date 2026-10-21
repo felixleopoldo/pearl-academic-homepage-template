@@ -6,20 +6,10 @@ permalink: /talks/
 
 ## Talks
 
-<div class="entry">
-  <strong>Talk Title Goes Here</strong><br>
-  <span class="meta">Conference / Seminar Name, City, Country — Month Year.</span>
-</div>
+Entries come from `_data/talks.yml` — add, remove, or reorder items there;
+no HTML needed.
 
-<div class="entry">
-  <strong>Another Talk Title</strong><br>
-  <span class="meta">Invited talk, Department of Example, University Name — Month Year.</span>
-  <!-- You can embed a recording like this: -->
-  <!--
-  <br>
-  <iframe width="420" height="236" src="https://www.youtube.com/embed/VIDEO_ID" title="Talk recording" frameborder="0" allowfullscreen></iframe>
-  -->
-</div>
+{% include ref-list.html items=site.data.talks %}
 
 ### Selected Lectures
 

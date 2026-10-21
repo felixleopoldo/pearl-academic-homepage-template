@@ -1,0 +1,29 @@
+{% comment %}
+  Renders a reference-numbered list ("(R-N): [pdf] [code]" style) from a data
+  array — no per-entry HTML needed, just add items to a file under _data/.
+
+  Usage: {% include ref-list.html items=site.data.publications %}
+
+  Each item needs `id` and optionally `links` (list of {label, url}).
+  Then either:
+    - authors + title + venue   → renders as a publication/talk citation, or
+    - title + description       → renders as a software/project entry
+  Add `repo` (e.g. "yourname/yourrepo") to show a live GitHub star badge.
+{% endcomment %}
+<dl class="ref-list">
+  {% for item in include.items %}
+    <dt>
+      <span class="ref-id">({{ item.id }}):</span>
+      {% for link in item.links %}<a href="{{ link.url }}" target="_blank" rel="noopener">[{{ link.label }}]</a> {% endfor %}
+      {% if item.repo %}<a href="https://github.com/{{ item.repo }}/stargazers/" target="_blank" rel="noopener"><img alt="GitHub stars" src="https://img.shields.io/github/stars/{{ item.repo }}.svg?style=social&amp;label=Star&amp;maxAge=2592000"></a>{% endif %}
+    </dt>
+    <dd>
+      {% if item.authors %}
+        <strong>{{ item.authors }}</strong>, &ldquo;{{ item.title }},&rdquo;<br>
+        In <em>{{ item.venue }}</em>.
+      {% else %}
+        <strong>{{ item.title }}</strong> &mdash; {{ item.description }}
+      {% endif %}
+    </dd>
+  {% endfor %}
+</dl>
