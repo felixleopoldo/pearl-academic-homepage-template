@@ -1,0 +1,16 @@
+{% comment %}
+  Renders a list of {title, url (optional), meta} entries — used for
+  Positions and Education on the Bio page. No HTML needed per entry.
+
+  Usage: {% include entry-list.html items=site.data.positions %}
+
+  Each item: `title` (institution/degree name), optional `url` (makes the
+  title a link), and `meta` (role, advisor, years — already formatted as
+  you want it to read, e.g. "Research Fellow, 2025–present.").
+{% endcomment %}
+{% for item in include.items %}
+<div class="entry">
+  <strong>{% if item.url %}<a href="{{ item.url }}" target="_blank" rel="noopener">{{ item.title }}</a>{% else %}{{ item.title }}{% endif %}</strong><br>
+  <span class="meta">{{ item.meta }}</span>
+</div>
+{% endfor %}

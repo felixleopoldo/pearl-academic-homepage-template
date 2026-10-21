@@ -24,11 +24,10 @@ theme, and deploy on GitHub Pages.
      on whether your repo is a `username.github.io` root site or served
      under a subpath, so it works either way without editing)
    - `nav`, `social`, `news`, `reviewer_for`
-4. Edit `index.md` and `bio.md` with your own content. Publications, talks,
-   and software are data-driven — add your entries to `_data/publications.yml`,
-   `_data/talks.yml`, and `_data/software.yml` (plain YAML list items, no HTML
-   required) and they'll render automatically in the "(R-N): [pdf]" reference
-   style.
+4. Edit `index.md` with your own content. Publications, talks, software, bio
+   positions, and education are all data-driven — add your entries to the
+   files under `_data/` (plain YAML list items, no HTML required) and they'll
+   render automatically.
 5. (Optional) Add a profile photo to `assets/images/` and point
    `author.photo` at it in `_config.yml`. If left empty, a circular avatar
    with your initials is shown instead.
@@ -50,13 +49,13 @@ Then open http://localhost:4000.
 
 ```
 _config.yml       site settings, nav, social links, news items
-_data/            publications.yml, talks.yml, software.yml — your entries, as plain YAML
+_data/            publications.yml, talks.yml, software.yml, positions.yml, education.yml — your entries, as plain YAML
 _layouts/         default.html — sidebar + content wrapper
-_includes/        sidebar.html, ref-list.html (renders _data/* as "(R-N): [pdf]" lists)
+_includes/        sidebar.html, ref-list.html ("(R-N): [pdf]" lists), entry-list.html (positions/education)
 assets/css/       style.css — single stylesheet, the retro Pearl-homepage palette
 assets/images/    01-g.gif..04-g.gif — numbered lecture-marker icons
 index.md          home page (intro, current position, research interests, news, reviewer-for)
-bio.md            positions & education
+bio.md            renders _data/positions.yml and _data/education.yml
 publications.md   renders _data/publications.yml
 talks.md          renders _data/talks.yml, plus numbered-icon "Selected Lectures"
 software.md       renders _data/software.yml

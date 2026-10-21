@@ -10,24 +10,13 @@ permalink: /bio/
 
 ### Positions
 
-<div class="entry">
-  <strong><a href="#" target="_blank" rel="noopener">Current Institution, Department / Centre</a></strong><br>
-  <span class="meta">Your Title, (advisor/PI, if applicable), Year–present.</span>
-</div>
+Entries come from `_data/positions.yml` — add, remove, or reorder items
+there; no HTML needed.
 
-<div class="entry">
-  <strong><a href="#" target="_blank" rel="noopener">Previous Institution, Department</a></strong><br>
-  <span class="meta">Your Title, Year–Year.</span>
-</div>
+{% include entry-list.html items=site.data.positions %}
 
 ### Education
 
-<div class="entry">
-  <strong>PhD in Your Field</strong><br>
-  <span class="meta">University Name, Year.</span>
-</div>
+Entries come from `_data/education.yml`.
 
-<div class="entry">
-  <strong>MSc in Your Field</strong><br>
-  <span class="meta">University Name, Year.</span>
-</div>
+{% include entry-list.html items=site.data.education %}
