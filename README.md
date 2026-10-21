@@ -1,5 +1,9 @@
 # pearl-academic-homepage-template
 
+[![Deploy status](https://github.com/felixleopoldo/pearl-academic-homepage-template/actions/workflows/pages.yml/badge.svg)](https://github.com/felixleopoldo/pearl-academic-homepage-template/actions/workflows/pages.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Use this template](https://img.shields.io/badge/Use%20this-template-2ea44f)](https://github.com/new?template_name=pearl-academic-homepage-template&template_owner=felixleopoldo)
+
 A Jekyll template that faithfully recreates the retro academic-homepage look of
 [Judea Pearl's homepage](https://bayes.cs.ucla.edu/jp_home.html) — olive sidebar,
 ivory content pane, navy headings, standard blue links, "(R-N): [pdf]"
