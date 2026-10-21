@@ -4,7 +4,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Use this template](https://img.shields.io/badge/Use%20this-template-2ea44f)](https://github.com/new?template_name=pearl-academic-homepage-template&template_owner=felixleopoldo)
 
-A Jekyll template that faithfully recreates the retro academic-homepage look of
+A Jekyll template that recreates the retro academic-homepage look of
 [Judea Pearl's homepage](https://bayes.cs.ucla.edu/jp_home.html) — easy to fork,
 theme, and deploy on GitHub Pages.
 
