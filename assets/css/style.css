@@ -117,7 +117,7 @@ a:hover { text-decoration: none; }
 .content {
   flex: 1;
   min-width: 0;
-  padding: 1.25rem 2rem 4rem;
+  padding: 1.25rem 0.625rem 4rem;
 }
 
 .content-title {
